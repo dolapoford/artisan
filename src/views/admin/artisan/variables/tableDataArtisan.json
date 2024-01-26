@@ -1,0 +1,31 @@
+[
+    {
+      "photo":"https://bit.ly/dan-abramov",
+      "name": "Dolapo", 
+      "address": "No 8 Aloge str Abeokuta Ogun state",
+      "phone":907327331 ,
+      "description": "I really love the website"
+    },
+    {
+        "photo":"https://bit.ly/dan-abramov",
+        "name": "Odofin", 
+        "address": "No 8 Aloge str Abeokuta Ogun state",
+        "phone":907327331 ,
+        "description": "I really love the website"
+      },
+      {
+        "photo":"https://bit.ly/dan-abramov",
+        "name": "Zik", 
+        "address": "No 8 Aloge str Abeokuta Ogun state",
+        "phone":907327331 ,
+        "description": "I really love the website"
+      },
+      {
+        "photo":"https://bit.ly/dan-abramov",
+        "name": "Tobi", 
+        "address": "No 8 Aloge str Abeokuta Ogun state",
+        "phone":907327331 ,
+        "description": "I really love the website"
+      }
+  ]
+  
