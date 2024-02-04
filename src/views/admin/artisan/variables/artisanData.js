@@ -1,23 +1,20 @@
 export const artisanDataColumns = [
     {
-      Header: "PHOTO",
-      accessor: "photo",
+      Header: "LOGO",
+      accessor: "logo",
     },
     {
       Header: "NAME",
       accessor: "name",
     },
     {
-      Header: "ADDRESS",
-      accessor: "address",
+      Header: "BUSINESSTYPE",
+      accessor: "businesstype",
     },
     {
       Header: "PHONE",
       accessor: "phone",
     },
-    {
-        Header: "DESCRIPTION",
-        accessor: "description",
-      },
+    
   ];
   

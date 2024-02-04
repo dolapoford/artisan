@@ -136,31 +136,20 @@ export default function Users(props) {
                             <Tr {...row.getRowProps()} key={index}>
                                 {row.cells.map((cell, index) => {
                                     let data = "";
-                                    if (cell.column.Header === "PHOTO") {
+                                    if (cell.column.Header === "NAME") {
                                         data = (
-                                            <Flex align='center'>
-                                                <Checkbox
-                                                    defaultChecked={cell.value[1]}
-                                                    colorScheme='brandScheme'
-                                                    me='10px'
-                                                />
-                                                <Image
-                                                    borderRadius='full'
-                                                    boxSize='50px'
-                                                    src={cell.value}
-                                                    alt='Dan Abramov'
-                                                />
-                                            </Flex>
+                                          <Flex align='center'>
+                                            <Checkbox
+                                              defaultChecked={cell.value[1]}
+                                              colorScheme='brandScheme'
+                                              me='10px'
+                                            />
+                                            <Text color={textColor} fontSize='sm' fontWeight='700'>
+                                              {cell.value}
+                                            </Text>
+                                          </Flex>
                                         );
-                                    } else if (cell.column.Header === "NAME") {
-                                        data = (
-                                            <Flex align='center'>
-                                                <Text color={textColor} fontSize='sm' fontWeight='700'>
-                                                    {cell.value}
-                                                </Text>
-                                            </Flex>
-                                        );
-                                    } else if (cell.column.Header === "ADDRESS") {
+                                      } else if (cell.column.Header === "EMAIL") {
                                         data = (
                                             <Text color={textColor} fontSize='sm' fontWeight='700'>
                                                 {cell.value}
@@ -172,13 +161,7 @@ export default function Users(props) {
                                                 {cell.value}
                                             </Text>
                                         );
-                                    } else if (cell.column.Header === "DESCRIPTION") {
-                                        data = (
-                                            <Text color={textColor} fontSize='sm' fontWeight='700'>
-                                                {cell.value}
-                                            </Text>
-                                        );
-                                    }
+                                    } 
                                     return (
                                         <Td
                                             {...cell.getCellProps()}

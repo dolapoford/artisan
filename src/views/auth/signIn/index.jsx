@@ -68,7 +68,7 @@ function SignIn() {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
-    <DefaultAuth illustrationBackground={illustration} image={illustration}>
+    <DefaultAuth  image={illustration}>
       <Flex
         maxW={{ base: "100%", md: "max-content" }}
         w='100%'

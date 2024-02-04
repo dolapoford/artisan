@@ -34,7 +34,7 @@ import {
                 <Icon as={MdUpload} w='30px' h='30px' color={brandColor} />
                 <Flex justify='center' mx='auto' mb='10px'>
                   <Text fontSize='md' fontWeight='700' color={brandColor}>
-                    Upload Files
+                    Upload Image
                   </Text>
                 </Flex>
                 <Text fontSize='sm' fontWeight='500' color='secondaryGray.500'>

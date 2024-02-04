@@ -14,7 +14,7 @@ export default function Account() {
                     spacing={4}
                     align='stretch'
                 >
-                    <Box h='50px' display="flex" justifyContent="space-between" alignItems="center" pr='3' pl='3'>
+                    <Box h='50px' display="flex" justifyContent="space-between" alignItems="center" pr='3' pl='3' cursor="pointer">
                         <Text fontSize="18px" color='grey' >Change Password</Text>
                         <Text fontSize="18px" ><FaChevronRight /></Text>
                     </Box>
@@ -35,7 +35,7 @@ export default function Account() {
                     spacing={4}
                     align='stretch'
                 >
-                    <Box>
+                    <Box cursor="pointer">
                         <FormControl h='50px' display="flex" justifyContent="space-between" alignItems="center" pr='3' pl='3'>
                             <FormLabel htmlFor='notify-alerts' mb='0'>
                                 Notifications

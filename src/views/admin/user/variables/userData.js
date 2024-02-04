@@ -1,24 +1,18 @@
 export const userDataColumns = [
-    {
-      Header: "PHOTO",
-      accessor: "photo",
-    },
+    
     {
       Header: "NAME",
       accessor: "name",
     },
     {
-      Header: "ADDRESS",
-      accessor: "address",
+      Header: "EMAIL",
+      accessor: "email",
     },
     {
       Header: "PHONE",
       accessor: "phone",
     },
-    {
-        Header: "DESCRIPTION",
-        accessor: "description",
-      },
+    
   ];
 
 //   const initialState = {

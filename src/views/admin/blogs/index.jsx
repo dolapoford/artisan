@@ -4,23 +4,25 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import Editor from "./components/Editor";
 import Action from "./components/Action";
 import Categories from "./components/Categories";
-
+import NewBlog from "./components/NewBlog";
+import { blogData } from "./variables/BlogData";
+import RecentBlog from "./components/RecentBlog";
 export default function Blogs() {
   return (
     <Box mt="100px">
-      <div className="row">
-        <div className="col-sm-12 col-md-8">
-          <Editor />
-        </div>
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
-          <Action />
-          <Categories />
+      <NewBlog />
+      <Box mt="20px">
+        <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap="20px" mb="20px">
+          {blogData.map((item, index) => (
+            <RecentBlog
+              title={item.title}
+              imgUrl={item.imgUrl}
+              date={item.date}
+              key={item.title + index}
+            />
+          ))}
         </SimpleGrid>
-      </div>
-
-      {/* <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <Editor />
-      </SimpleGrid> */}
+      </Box>
     </Box>
   );
 }

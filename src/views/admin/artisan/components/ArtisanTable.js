@@ -12,6 +12,7 @@ import {
     Input,
     Button,
     Modal,
+    FormControl,
     Textarea,
     ModalOverlay,
     ModalContent,
@@ -80,6 +81,7 @@ export default function CheckTable(props) {
                 </Text>
                 <Flex gap='10px'>
                     <Button colorScheme='purple' variant='outline' fontSize='16px' onClick={onOpen}>Add</Button>
+                    <Button colorScheme='green' variant='outline' fontSize='16px'>Edit</Button>
                     <Button colorScheme='red' variant='outline' fontSize='16px'>Delete</Button>
                 </Flex>
             </Flex>
@@ -112,7 +114,7 @@ export default function CheckTable(props) {
                             <Tr {...row.getRowProps()} key={index}>
                                 {row.cells.map((cell, index) => {
                                     let data = "";
-                                    if (cell.column.Header === "PHOTO") {
+                                    if (cell.column.Header === "LOGO") {
                                         data = (
                                             <Flex align='center'>
                                                 <Checkbox
@@ -136,7 +138,7 @@ export default function CheckTable(props) {
                                                 </Text>
                                             </Flex>
                                         );
-                                    } else if (cell.column.Header === "ADDRESS") {
+                                    } else if (cell.column.Header === "BUSINESSTYPE") {
                                         data = (
                                             <Text color={textColor} fontSize='sm' fontWeight='700'>
                                                 {cell.value}
@@ -148,13 +150,7 @@ export default function CheckTable(props) {
                                                 {cell.value}
                                             </Text>
                                         );
-                                    } else if (cell.column.Header === "DESCRIPTION") {
-                                        data = (
-                                            <Text color={textColor} fontSize='sm' fontWeight='700'>
-                                                {cell.value}
-                                            </Text>
-                                        );
-                                    }
+                                    } 
                                     return (
                                         <Td
                                             {...cell.getCellProps()}
@@ -182,16 +178,27 @@ export default function CheckTable(props) {
 
                         <UploadArtisan />
                         <Box w="100%">
-                            <Flex gap="20px" mb="12px">
-                            <Input variant='outline' placeholder='Name' w="100%"/>
-                            <Input variant='outline' placeholder='Address'  w="100%"/>
-                            </Flex>
-                            <Flex gap="20px" mb="12px">
-                            <Input variant='outline'type='tel' placeholder='Phone number' w="100%"/>
-                            </Flex>
-                            <Flex>
-                            <Textarea placeholder='Description' /> 
-                            </Flex>
+                            <FormControl>
+                                <Flex gap="20px" mb="12px">
+                                    <Input variant='outline' placeholder='Name' w="100%" />
+                                    <Input variant='outline' placeholder='Email' w="100%" />
+                                </Flex>
+                                <Flex gap="20px" mb="12px">
+                                    <Input variant='outline' type='tel' placeholder='Phone number' w="100%" />
+                                    <Input variant='outline' type='tel' placeholder='Business Type' w="100%" />
+                                </Flex>
+                                <Flex gap="20px" mb="12px">
+                                    <Input variant='outline' type='tel' placeholder='Address' w="100%" />
+                                    <Input variant='outline' type='tel' placeholder='Street' w="100%" />
+                                </Flex>
+                                <Flex gap="20px" mb="12px">
+                                    <Input variant='outline' type='tel' placeholder='City' w="100%" />
+                                    <Input variant='outline' type='tel' placeholder='Postal Code' w="100%" />
+                                </Flex>
+                                <Flex>
+                                    <Textarea placeholder='Serive Description' />
+                                </Flex>
+                            </FormControl>
                         </Box>
 
 
